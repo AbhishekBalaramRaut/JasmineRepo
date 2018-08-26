@@ -1,6 +1,6 @@
 import { MessageService} from "./message.service";
 
-describe('StrengthPipe',() => {
+describe('MessageService ',() => {
     let service: MessageService;
 
     beforeEach(() => {
