@@ -41,4 +41,15 @@ describe(' HeroDetailComponent deep tests',() =>{
       expect(fixture.nativeElement.querySelector('h2').textContent).toContain('SUPERDUDE');
 
     });
+
+    it('should call update hero when save is called ', () =>{
+        mockHeroService.updatetHero.and.returnValue(of(true));
+        fixture.detectChanges();
+      fixture.componentInstance.save();
+      setTimeout(() => {
+        expect(mockHeroService.updatetHero).toHaveBeenCalled();
+      },300);
+
+    });
+
 });
